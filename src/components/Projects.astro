@@ -42,7 +42,7 @@ const TAGS = {
     icon: Appwrite,
   },
   FRAMER: {
-    name: "Framer Motion",
+    name: "Framer",
     class: "bg-[#0055FF] text-white", // Azul Framer Motion
     icon: Framer,
   },
@@ -55,7 +55,7 @@ const PROJECTS = [
     link: "https://geotechshop.wilfredodev.com/",
     github: "https://github.com/DevWilfredo/geotechshop",
     image: "/projects/geotech.webp",
-    tags: [TAGS.TAILWIND,TAGS.NODE, TAGS.REACT, TAGS.EXPRESS, TAGS.POSTGRE],
+    tags: [TAGS.REACT,TAGS.NODE, TAGS.TAILWIND, TAGS.POSTGRE, TAGS.EXPRESS],
   },
   {
     title: "Movieland - Tu portal de películas y series",
@@ -100,35 +100,34 @@ const PROJECTS = [
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-2 w-full">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
+        {github && (
+          <LinkButton href={github}>
+            <GitHub class="size-6" />
+            Code
+          </LinkButton>
+        )}
+        {link && (
+          <LinkButton href={link}>
+            <Link class="size-4" />
+            Preview
+          </LinkButton>
+        )}
+      </footer>
     </div>
   </div>
 </article>
