@@ -1,27 +1,47 @@
-# 👨🏻‍💻 Porfolio para programadores y desarrolladores
+# 👨🏻‍💻 Portfolio WilfredoDev
 
 <div align="center">
-<a href="https://porfolio.dev/">
-<img src="./public/porfolio.webp">
+<a href="https://wilfredodev.com">
+<img src="./public/portfolio.webp">
 </a>
 <p></p>
 </div>
 
 <div align="center">
 
-![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
-![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
-![GitHub stars](https://img.shields.io/github/stars/midudev/porfolio.dev)
-![GitHub PRs](https://img.shields.io/github/issues-pr/midudev/porfolio.dev)
-![GitHub forks](https://img.shields.io/github/forks/midudev/porfolio.dev)
-![GitHub issues](https://img.shields.io/github/issues/midudev/porfolio.dev)
-
 </div>
 
-## 🫂 Contribuidores
+---
 
-<a href="https://github.com/midudev/porfolio.dev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=midudev/porfolio.dev" />
-</a>
+Este es mi portfolio personal desarrollado con **Astro** y **Tailwind CSS**. Aquí muestro mis proyectos, habilidades y experiencia como desarrollador fullstack.
 
-<p></p>
+## Tecnologías utilizadas
+
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Características
+
+- Diseño responsivo y moderno
+- Sección de proyectos destacados
+- Información sobre mí y mis habilidades
+- Contacto directo
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/DevWilfredo/wilfredodev-portfolio.git
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+## Licencia
+
+Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
