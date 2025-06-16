@@ -1,0 +1,140 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Link from "./icons/Link.astro"
+import LinkButton from "./LinkButton.astro"
+import React from "./icons/React.astro"
+import Node from "./icons/Node.astro"
+import Express from "./icons/Express.astro"
+import Postgre from "./icons/Postgres.astro"
+import Appwrite from "./icons/Appwrite.astro"
+import Framer from "./icons/Framer.astro"
+
+const TAGS = {
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: "bg-[#336791] text-white", // Azul claro de Tailwind
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#61DAFB] text-black", // Azul claro de React con texto negro para contraste
+    icon: React,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#339933] text-white", // Verde Node.js
+    icon: Node,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-[#222222] text-white", // Gris oscuro de Express
+    icon: Express,
+  },
+  POSTGRE: {
+    name: "PostgreSQL",
+    class: "bg-[#336791] text-white", // Azul PostgreSQL
+    icon: Postgre,
+  },
+  APPWRITE: {
+    name: "Appwrite",
+    class: "bg-[#F02E65] text-white", // Rosa Appwrite
+    icon: Appwrite,
+  },
+  FRAMER: {
+    name: "Framer Motion",
+    class: "bg-[#0055FF] text-white", // Azul Framer Motion
+    icon: Framer,
+  },
+}
+const PROJECTS = [
+  {
+    title: "GeotechShop - Tienda de tecnología y electrónica",
+    description:
+      "Tienda online de tecnología y electrónica. Más de 100 productos. Creada con Node.js, Tailwind CSS, React y Express. Incluye carrito de compras, autenticación y gestión de pedidos.",
+    link: "https://geotechshop.wilfredodev.com/",
+    github: "https://github.com/DevWilfredo/geotechshop",
+    image: "/projects/geotech.webp",
+    tags: [TAGS.TAILWIND,TAGS.NODE, TAGS.REACT, TAGS.EXPRESS, TAGS.POSTGRE],
+  },
+  {
+    title: "Movieland - Tu portal de películas y series",
+    description:
+      "Movieland es una aplicación web que te permite explorar y descubrir películas y series de forma sencilla. Utiliza la API de TMDB para obtener información actualizada sobre títulos populares, géneros y detalles de cada película o serie.",
+    link: "https://movieland.wilfredodev.com/",
+    github: 'https://github.com/DevWilfredo/movie-app',
+    image: "/projects/movieland.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.APPWRITE],
+  },
+  {
+    title: "Links - WilfredoDev Links",
+    description: 'Una aplicación web sencilla para compartir enlaces de interés de mi persona. Permite a los usuarios acceder a mis redes sociales, portafolio y otros recursos importantes.',
+    link: "https://links.wilfredodev.com/",
+    github: "https://github.com/DevWilfredo/wilfredo-links",
+    image: "/projects/links.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  }, 
+  {
+    title: 'Starwars - Databank de Star Wars',
+    description: 'Aplicación web que permite explorar el universo de Star Wars. Utiliza la API de SWAPI para obtener información sobre personajes, naves, planetas y más.',
+    link: "https://starwars.wilfredodev.com/",
+    github: "https://github.com/DevWilfredo/StarWars-Page",
+    image: "/projects/starwars.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.FRAMER],
+  }
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Code
+              
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>
+
+
+

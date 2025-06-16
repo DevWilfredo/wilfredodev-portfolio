@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Enero 2023 - Marzo 2024",
+    title: "Desarrollador Fullstack",
+    company: "Redmasiva",
+    description:
+      "Responsable de la creacion de soluciones y sistemas adaptados a las necesidades de la empresa y clientes terceros, usando tecnologias como PHP, Laravel, tailwindcss y React.",
+    link: "https://www.redmasiva.com/"
+  },
+  {
+    date: "Enero 2022 - Enero 2023",
+    title: "SysAdmin y soporte técnico",
+    company: "Redmasiva",
+    description:
+      "Responsable de la administracion de servidores y soporte tecnico a clientes, resolviendo problemas relacionados con la infraestructura y el software.",
+  
+    link: "https://www.redmasiva.com/"
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
