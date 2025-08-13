@@ -9,6 +9,8 @@ import Express from "./icons/Express.astro"
 import Postgre from "./icons/Postgres.astro"
 import Appwrite from "./icons/Appwrite.astro"
 import Framer from "./icons/Framer.astro"
+import Python from "./icons/Python.astro"
+import Flask from "./icons/Flask.astro"
 
 const TAGS = {
   TAILWIND: {
@@ -46,16 +48,36 @@ const TAGS = {
     class: "bg-[#0055FF] text-white", // Azul Framer Motion
     icon: Framer,
   },
+  PYTHON: {
+  name: 'Python',
+  class: 'bg-[#FFD43B] text-[#306998]', // fondo amarillo oficial Python, texto azul
+  icon: Python
+},
+FLASK: {
+  name: 'Flask',
+  class: 'bg-[#3d3d3d] text-white', // fondo gris obscuro, texto blanco
+  icon: Flask
+}
+
 }
 const PROJECTS = [
+  // {
+  //   title: "GeotechShop - Tienda de tecnología y electrónica",
+  //   description:
+  //     "Tienda online de tecnología y electrónica. Más de 100 productos. Creada con Node.js, Tailwind CSS, React y Express. Incluye carrito de compras, autenticación y gestión de pedidos.",
+  //   link: "https://geotechshop.wilfredodev.com/",
+  //   github: "https://github.com/DevWilfredo/geotechshop",
+  //   image: "/projects/geotech.webp",
+  //   tags: [TAGS.REACT,TAGS.NODE, TAGS.TAILWIND, TAGS.POSTGRE, TAGS.EXPRESS],
+  // },
   {
-    title: "GeotechShop - Tienda de tecnología y electrónica",
+    title: "NexHack - Plataforma de retos de programación",
     description:
-      "Tienda online de tecnología y electrónica. Más de 100 productos. Creada con Node.js, Tailwind CSS, React y Express. Incluye carrito de compras, autenticación y gestión de pedidos.",
-    link: "https://geotechshop.wilfredodev.com/",
-    github: "https://github.com/DevWilfredo/geotechshop",
-    image: "/projects/geotech.webp",
-    tags: [TAGS.REACT,TAGS.NODE, TAGS.TAILWIND, TAGS.POSTGRE, TAGS.EXPRESS],
+      "NexHack es una plataforma de retos de programación que permite a los usuarios resolver desafíos y mejorar sus habilidades de codificación en un entorno que simula un escenario de trabajo real en el cual los Usuarios se apuntan en Hackathons y pueden hacer equipos con la comunidad para resolver los retos, mejorando sus habilidades tecnicas y hablidades blandas",
+    link: "https://nex-hack.vercel.app/",
+    github: 'https://github.com/DevWilfredo/NexHack',
+    image: "/projects/nexhack.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.PYTHON, TAGS.POSTGRE, TAGS.FRAMER, TAGS.FLASK],
   },
   {
     title: "Movieland - Tu portal de películas y series",
